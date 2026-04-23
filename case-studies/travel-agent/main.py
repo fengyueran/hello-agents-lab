@@ -14,6 +14,10 @@ AGENT_SYSTEM_PROMPT = """
 - `get_weather(city: str)`: 查询指定城市的实时天气。
 - `get_attraction(city: str, weather: str)`: 根据城市和天气搜索推荐的旅游景点。
 
+# 重要机制说明:
+- 你并不直接“调用”函数。你只是以文本形式输出符合约定的字符串。
+- 外部 Agent 脚本会解析你的输出并代为执行函数，然后将结果反馈给你（即 Observation）。
+
 # 输出格式要求:
 你的每次回复必须严格遵循以下格式，包含一对Thought和Action：
 
