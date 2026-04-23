@@ -21,7 +21,11 @@
 ## 如何运行
 
 1. **配置 API Key**：
-   在根目录的 `.env` 文件中配置 `TAVILY_API_KEY`。
+   复制本案例模板并填写配置：
+   ```bash
+   cp case-studies/travel-agent/.env.example case-studies/travel-agent/.env
+   ```
+   然后在本案例目录的 `.env` 文件中配置 `OPENAI_API_KEY`、`OPENAI_BASE_URL`、`MODEL_NAME` 和 `TAVILY_API_KEY`。
 2. **运行代码**：
    ```bash
    python case-studies/travel-agent/main.py

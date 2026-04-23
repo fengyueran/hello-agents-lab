@@ -29,11 +29,17 @@ conda activate hello-agents
 ```
 
 ### 3. 配置环境变量
-1. 复制配置文件模板：
-   ```bash
-   cp configs/.env.example .env
-   ```
-2. 编辑 `.env` 文件，填入你的 `OPENAI_API_KEY`。
+1. 如果你要运行某个具体案例，优先复制该案例目录下的 `.env.example`：
+   - `case-studies/basic-llm-agent/.env.example`
+   - `case-studies/travel-agent/.env.example`
+   - `case-studies/open-source-llm-agent/.env.example`
+2. 按案例分别放置 `.env` 文件，避免不同示例的变量互相混杂。
+3. 说明：
+   - 基础 LLM 客户端示例读取 `case-studies/basic-llm-agent/.env`。
+   - `travel-agent` 示例读取 `case-studies/travel-agent/.env`。
+   - `open-source-llm-agent` 示例读取 `case-studies/open-source-llm-agent/.env`。
+4. 如果你想快速查看统一模板，也可以参考 `configs/.env.example`。
+5. `open-source-llm-agent` 示例通常不依赖 API Key，可按需配置本地模型相关变量。
 
 ### 4. 安装依赖
 ```bash
@@ -43,6 +49,7 @@ pip install -r requirements.txt
 ## 📂 目录结构
 
 - `case-studies/`: 学习案例及实战代码。
+- `case-studies/basic-llm-agent/`: 基础 LLM 客户端示例，对应 4.1.1 到 4.1.3。
 - `docs/`: 学习笔记与文档说明。
 - `configs/`: 配置文件模板。
 

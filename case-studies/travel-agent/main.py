@@ -1,11 +1,12 @@
 import os
 import re
+from pathlib import Path
 from dotenv import load_dotenv
 from client import OpenAICompatibleClient
 from tools import available_tools
 
 # 1. 加载配置
-load_dotenv() # 加载根目录下的 .env
+load_dotenv(dotenv_path=Path(__file__).with_name(".env")) # 加载本案例目录下的 .env
 
 AGENT_SYSTEM_PROMPT = """
 你是一个智能旅行助手。你的任务是分析用户的请求，并使用可用工具一步步地解决问题。
